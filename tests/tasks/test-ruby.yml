@@ -1,0 +1,10 @@
+---
+# Tests if ruby can actually be used
+
+- name: get ruby version
+  command: ruby -v
+  register: ruby2_test_fact_ruby_version
+- name: assert ruby version is displayed and is at least version 2
+  assert:
+    that:
+      - "'ruby 2.' in ruby2_test_fact_ruby_version.stdout"

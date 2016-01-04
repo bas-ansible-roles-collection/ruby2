@@ -1,0 +1,11 @@
+---
+# Install the Ruby language
+
+- name: install ruby 2 - CentOS
+  yum:
+             pkg={{ item }}
+    update_cache=yes
+           state=present
+  with_items:
+    - ruby
+    - ruby-devel

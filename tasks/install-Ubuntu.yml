@@ -1,0 +1,71 @@
+---
+# Install the Ruby language
+
+# If using non-system sources (preferred)
+
+- name: install prerequisites for installing custom PPA - Ubuntu
+  apt:
+                 pkg={{ item }}
+        update_cache=yes
+    cache_valid_time=3600
+               state=present
+  with_items:
+    - software-properties-common
+  when: BARC_use_non_system_package_sources == true or BARC_use_non_system_package_sources == 'True'
+
+- name: add custom ruby PPA - Ubuntu
+  apt_repository:
+    repo='ppa:brightbox/ruby-ng'
+    state=present
+  when: BARC_use_non_system_package_sources == true or BARC_use_non_system_package_sources == 'True'
+
+- name: install ruby 2 from custom PPA - Ubuntu
+  apt:
+             pkg={{ item }}
+    update_cache=yes
+           state=present
+  with_items:
+    - ruby2.2
+    - ruby2.2-dev
+  when: BARC_use_non_system_package_sources == true or BARC_use_non_system_package_sources == 'True'
+
+# If using system-sources only
+
+- name: install ruby 2 from system sources - Ubuntu
+  apt:
+                 pkg={{ item }}
+        update_cache=yes
+    cache_valid_time=3600
+               state=present
+  with_items:
+    - ruby2.0
+    - ruby2.0-dev
+  when: BARC_use_non_system_package_sources == false or BARC_use_non_system_package_sources == 'False'
+
+- name: prevent issues with future system updates using fixed ruby version - Ubuntu
+  command: dpkg-divert --add --rename --divert /usr/bin/ruby.divert /usr/bin/ruby
+  when: BARC_use_non_system_package_sources == false or BARC_use_non_system_package_sources == 'False'
+  tags:
+    - BARC_CONFIGURE
+    - BARC_CONFIGURE_PACKAGES
+
+- name: prevent issues with future system updates using fixed gem version - Ubuntu
+  command: dpkg-divert --add --rename --divert /usr/bin/gem.divert /usr/bin/gem
+  when: BARC_use_non_system_package_sources == false or BARC_use_non_system_package_sources == 'False'
+  tags:
+    - BARC_CONFIGURE
+    - BARC_CONFIGURE_PACKAGES
+
+- name: fix ruby to use the version from the desired package not its dependency - Ubuntu
+  command: update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby2.0 1
+  when: BARC_use_non_system_package_sources == false or BARC_use_non_system_package_sources == 'False'
+  tags:
+    - BARC_CONFIGURE
+    - BARC_CONFIGURE_PACKAGES
+
+- name: fix gem to use the version from the desired package not its dependency - Ubuntu
+  command: update-alternatives --install /usr/bin/gem gem /usr/bin/gem2.0 1
+  when: BARC_use_non_system_package_sources == false or BARC_use_non_system_package_sources == 'False'
+  tags:
+    - BARC_CONFIGURE
+    - BARC_CONFIGURE_PACKAGES
