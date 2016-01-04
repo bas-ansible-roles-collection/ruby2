@@ -7,4 +7,6 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## 0.1.0 - 07/12/2015
 
+### Added
+
 * Initial version - with support for fixing old default ruby version on Ubuntu when using system package
