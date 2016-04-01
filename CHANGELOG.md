@@ -9,6 +9,7 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ### Changed
 
 * Refactored package installation tests
+* Migrating from new Ansible Galaxy namespace, from 'BARC' to 'bas-ansible-roles-collection'
 
 ### Removed
 

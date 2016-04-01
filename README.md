@@ -90,7 +90,7 @@ See the *limitations* section for more information.
   become: yes
   vars: []
   roles:
-    - BARC.ruby2
+    - bas-ansible-roles-collection.ruby2
 ```
 
 ### Tags
