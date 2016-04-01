@@ -1,6 +1,12 @@
 ---
 # Install the Ruby language
 
+# If using non-system sources (preferred)
+
+# > TODO
+
+# If using system-sources only
+
 - name: install ruby 2 - CentOS
   yum:
              pkg={{ item }}
@@ -9,3 +15,4 @@
   with_items:
     - ruby
     - ruby-devel
+  when: BARC_use_non_system_package_sources == false or BARC_use_non_system_package_sources == 'False'
