@@ -5,6 +5,11 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][unreleased]
 
+
+### Changed
+
+* Refactored package installation tests
+
 ### Removed
 
 * Unneeded CI testing playbook
