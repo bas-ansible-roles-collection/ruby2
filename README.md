@@ -111,7 +111,7 @@ This role uses the following tags, for various tasks:
 * **MAY** be specified
 * Specifies whether non-system sources can be used to install packages
 * Note: This variable is scoped to all other BARC roles which install packages from non-system sources
-* Values MUST use one of these options, as determined by the SSH Daemon configuration file:
+* Values MUST use one of these options, as determined by Ansible:
     * `true`
     * `false`
 * Values **SHOULD NOT** be quoted to prevent Ansible coercing values to a string
