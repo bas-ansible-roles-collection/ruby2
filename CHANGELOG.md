@@ -5,6 +5,9 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][unreleased]
 
+### Fixed
+
+* Variable comments - very minor inconsistencies
 
 ### Changed
 
