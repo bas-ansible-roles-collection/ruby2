@@ -9,5 +9,4 @@
 
 # Unlike projects, role dependencies are not pinned to ensure roles always work with the latest role versions.
 
-  version: v0.1.0
 - src: bas-ansible-roles-collection.system-core

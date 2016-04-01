@@ -8,6 +8,7 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ### Fixed
 
 * Variable comments - very minor inconsistencies
+* Testing role dependencies should always use latest versions
 
 ### Changed
 
