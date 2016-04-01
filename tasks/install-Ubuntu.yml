@@ -3,7 +3,7 @@
 
 # If using non-system sources (preferred)
 
-- name: install prerequisites for installing custom PPA - Ubuntu
+- name: install prerequisites for installing PPAs - Ubuntu
   apt:
                  pkg={{ item }}
         update_cache=yes
@@ -13,13 +13,13 @@
     - software-properties-common
   when: BARC_use_non_system_package_sources == true or BARC_use_non_system_package_sources == 'True'
 
-- name: add custom ruby PPA - Ubuntu
+- name: add ruby PPA - Ubuntu
   apt_repository:
     repo='ppa:brightbox/ruby-ng'
     state=present
   when: BARC_use_non_system_package_sources == true or BARC_use_non_system_package_sources == 'True'
 
-- name: install ruby 2 from custom PPA - Ubuntu
+- name: install ruby 2 from PPA - Ubuntu
   apt:
              pkg={{ item }}
     update_cache=yes
