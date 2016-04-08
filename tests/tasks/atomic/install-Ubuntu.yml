@@ -6,8 +6,8 @@
 - name: determine if ruby packages are installed from non-system sources - Ubuntu
   command: "dpkg -s {{ item }}"
   with_items:
-    - ruby2.2
-    - ruby2.2-dev
+    - ruby2.3
+    - ruby2.3-dev
   changed_when: False
   register: ruby2_test_fact_ruby_non_system_packages_are_installed
   when: BARC_use_non_system_package_sources == true or BARC_use_non_system_package_sources == 'True'

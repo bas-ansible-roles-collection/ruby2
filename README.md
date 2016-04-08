@@ -96,9 +96,9 @@ More information is available in the
 Depending on the operating system used, the version of Ruby installed will different, though it will be at least Ruby 
 *2.0*. The table below hopes to clarify the version you can expect:
 
-| Ubuntu           | Yes                                  | *2.2*        | -                                                             |
 | Operating System | Non-System Package Sources Permitted | Ruby Version | Notes  |
 | ---------------- | ------------------------------------ | ------------ | ------ |
+| Ubuntu           | Yes                                  | *2.3*        | -      |
 | Ubuntu           | No                                   | *2.0*        | [1]    |
 | CentOS           | N/A                                  | *2.0*        | [2]    |
 
