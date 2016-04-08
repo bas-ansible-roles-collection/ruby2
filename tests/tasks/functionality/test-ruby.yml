@@ -3,6 +3,7 @@
 
 - name: get ruby version
   command: ruby -v
+  changed_when: false
   register: ruby2_test_fact_ruby_version
 - name: assert ruby is at least version 2
   assert:

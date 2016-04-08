@@ -3,6 +3,7 @@
 
 - name: get gem version
   command: gem -v
+  changed_when: false
   register: ruby2_test_fact_gem_version
 - name: assert gem version is at least version 2
   assert:
