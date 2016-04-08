@@ -1,6 +1,8 @@
 ---
 # Install the Ruby language
 
+# There is no non-system sources for Ruby 2 on CentOS - therefore system-only sources are used for both scenarios
+
 - name: install ruby 2 - CentOS
   yum:
              pkg={{ item }}

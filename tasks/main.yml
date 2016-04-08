@@ -1,7 +1,11 @@
 ---
-# tasks file for ruby2
+# Installs Ruby 2 language runtime and development packages
 
 - include: install.yml
   tags:
     - BARC_INSTALL
     - BARC_INSTALL_PACKAGES
+
+- include: register-role.yml
+  tags:
+    - BARC_ROLE_REGISTRATION

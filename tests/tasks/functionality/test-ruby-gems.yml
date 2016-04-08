@@ -1,10 +1,11 @@
 ---
-# Test if Ruby Gems can actual be used
+# Test if Ruby Gems can actually be used
 
 - name: get gem version
   command: gem -v
+  changed_when: false
   register: ruby2_test_fact_gem_version
-- name: assert gem version is displayed and is at least version 2
+- name: assert gem version is at least version 2
   assert:
     that:
       - "'2.' in ruby2_test_fact_gem_version.stdout"
