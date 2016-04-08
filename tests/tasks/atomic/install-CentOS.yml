@@ -1,9 +1,10 @@
 ---
 # Tests Ruby 2 is installed correctly
 
+# There is no non-system sources for Ruby 2 on CentOS - therefore system-only sources are used for both scenarios
+
 - name: determine if ruby packages are installed - CentOS
   command: rpm -qa
-  when: ansible_distribution == "CentOS"
   changed_when: False
   register: ruby2_test_fact_ruby_packages_are_installed
 - name: assert ruby packages are installed
@@ -11,4 +12,3 @@
     that:
       - "'ruby-' in ruby2_test_fact_ruby_packages_are_installed.stdout"
       - "'ruby-devel' in ruby2_test_fact_ruby_packages_are_installed.stdout"
-  when: ansible_distribution == "CentOS"

@@ -1,10 +1,12 @@
 # Ruby 2 (`ruby2`) - Change log
-
+ 
 All notable changes to this role will be documented in this file.
 This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
-
+ 
+Remember: Make sure to update `ruby2_barc_role_version` variable when a new version is released.
+ 
 ## [Unreleased][unreleased]
-
+ 
 ### Fixed
 
 * Task names - minor inconsistencies
@@ -17,6 +19,8 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 * Refactored package installation tests
 * Migrating from new Ansible Galaxy namespace, from 'BARC' to 'bas-ansible-roles-collection'
 * Migrating from old Ansible Galaxy 'categories' to new 'tags' meta-data
+* Refactored role to use Pristine base project - BARC flavour version 0.2.0
+* Upgrading to Ruby 2.3 on Ubuntu systems using non-systems sources, from 2.2
 
 ### Removed
 

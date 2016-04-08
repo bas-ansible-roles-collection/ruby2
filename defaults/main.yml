@@ -2,4 +2,7 @@
 # Default variables - inventory or playbook overrides will be respected
 
 # BARC specific variables
+ruby2_barc_role_name: ruby2
+ruby2_barc_role_version: 0.2.0
+
 BARC_use_non_system_package_sources: true

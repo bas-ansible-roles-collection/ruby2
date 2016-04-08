@@ -1,11 +1,7 @@
 ---
 # Install the Ruby language
 
-# If using non-system sources (preferred)
-
-# > TODO
-
-# If using system-sources only
+# There is no non-system sources for Ruby 2 on CentOS - therefore system-only sources are used for both scenarios
 
 - name: install ruby 2 - CentOS
   yum:
@@ -15,4 +11,3 @@
   with_items:
     - ruby
     - ruby-devel
-  when: BARC_use_non_system_package_sources == false or BARC_use_non_system_package_sources == 'False'

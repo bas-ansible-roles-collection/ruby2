@@ -1,5 +1,5 @@
 ---
-# Tests Ruby 2 is installed correctly
+# Tests the Ruby language was installed correctly
 
 - include: install-CentOS.yml
   when: ansible_distribution == "CentOS"
