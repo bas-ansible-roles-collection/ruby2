@@ -28,10 +28,6 @@ Remember: Make sure to update `ruby2_barc_role_version` variable when a new vers
 * Refactored role to use Pristine base project - BARC flavour version 0.2.0
 * Upgrading to Ruby 2.3 on Ubuntu systems using non-systems sources, from 2.2
 
-### Removed
-
-* Unneeded CI testing playbook
-
 ## 0.1.0 - 07/12/2015
 
 ### Added
